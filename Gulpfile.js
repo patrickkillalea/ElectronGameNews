@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 var childProcess = require('child_process');
@@ -10,7 +8,7 @@ var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var os = require('os');
 var release_windows = require('./buil.windows');
-
+var winInstaller = require('electron-windows-installer');
 
 var projectDir = jetpack;
 var srcDir = projectDir.cwd('./app');
@@ -20,11 +18,11 @@ var destDir = projectDir.cwd('./build');
 // Tasks
 // -------------------------------------
 
-gulp.task('clean', function (callback) {
+gulp.task('clean', function(callback) {
     return destDir.dirAsync('.', { empty: true });
 });
 
-gulp.task('copy', ['clean'], function () {
+gulp.task('copy', ['clean'], function() {
     return projectDir.copyAsync('app', destDir.path(), {
         overwrite: true,
         matching: [
@@ -37,7 +35,7 @@ gulp.task('copy', ['clean'], function () {
     });
 });
 
-gulp.task('build', ['copy'], function () {
+gulp.task('build', ['copy'], function() {
     return gulp.src('./app/index.html')
         .pipe(usemin({
             js: [uglify()]
@@ -46,11 +44,11 @@ gulp.task('build', ['copy'], function () {
 });
 
 
-gulp.task('run', function () {
+gulp.task('run', function() {
     childProcess.spawn(electron, ['./app'], { stdio: 'inherit' });
 });
 
-gulp.task('build-electron', function () {
+gulp.task('build-electron', function() {
     switch (os.platform()) {
         case 'darwin':
             // execute build.osx.js 
@@ -59,7 +57,15 @@ gulp.task('build-electron', function () {
             //execute build.linux.js
             break;
         case 'win32':
-        console.log('sdf')
+            console.log('sdf')
             return release_windows.build();
     }
+});
+
+gulp.task('create-windows-installer', function(done) {
+  winInstaller({
+    appDirectory: './build',
+    outputDirectory: './release',
+    arch: 'ia32'
+  }).then(done).catch(done);
 });

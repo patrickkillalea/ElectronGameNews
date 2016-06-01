@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
+
 <head>
-    <title>Customer Manager</title>
+    <title>Electron Game News</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -9,21 +10,31 @@
     <!-- build:css assets/css/app.css -->
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/searchbar.css" />
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- endbuild -->
 </head>
+
 <body>
-    <ng-view></ng-view>
+    <div data-ng-include="'./scripts/layout/topnav.html'"></div>
+        <div data-ng-include="'./scripts/layout/sidenav.html'"></div>
+        <div ng-view></div>
     <!-- build:js scripts/vendor.js -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-aria/angular-aria.js"></script>
     <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
     <!-- build:app scripts/app.js -->
     <script src="./scripts/app.js"></script>
-    <script src="./scripts/customer/customerService.js"></script>
-    <script src="./scripts/customer/customerController.js"></script>
+    <script src="./scripts/wow/wowService.js"></script>
+    <script src="./scripts/wow/wowController.js"></script>
+    <script src="./scripts/starcraft/starcraftService.js"></script>
+    <script src="./scripts/starcraft/starcraftController.js"></script>
     <!-- endbuild -->
 </body>
+
 </html>
