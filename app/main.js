@@ -6,6 +6,10 @@ var BrowserWindow = require('browser-window');
 
 var mainWindow = null;
 
+var topnav = require('./scripts/layout/topnav.js');
+
+// var remote = require('remote');
+
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
     if (process.platform != 'darwin') {
@@ -13,14 +17,12 @@ app.on('window-all-closed', function() {
     }
 });
 
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
 
-
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 1200, height: 800, 'min-height': 600, 'min-width': 800 });
+    mainWindow = new BrowserWindow({ width: 1200, height: 800, 'min-height': 600, 'min-width': 800, frame: false });
 
     // For No Top frame
     // , frame: false
@@ -29,7 +31,7 @@ app.on('ready', function() {
     mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
     // Open the devtools.
-    // mainWindow.openDevTools();
+    mainWindow.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function() {
@@ -42,3 +44,4 @@ app.on('ready', function() {
     // Disables the top app menu
     mainWindow.setMenu(null);
 });
+

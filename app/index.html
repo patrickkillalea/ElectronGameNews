@@ -16,7 +16,7 @@
     <!-- endbuild -->
 </head>
 
-<body>
+<body style="-webkit-app-region: drag">
     <div data-ng-include="'./scripts/layout/topnav.html'"></div>
         <div data-ng-include="'./scripts/layout/sidenav.html'"></div>
         <div ng-view></div>
@@ -30,6 +30,7 @@
     <!-- endbuild -->
     <!-- build:app scripts/app.js -->
     <script src="./scripts/app.js"></script>
+    
     <script src="./scripts/wow/wowService.js"></script>
     <script src="./scripts/wow/wowController.js"></script>
     <script src="./scripts/starcraft/starcraftService.js"></script>
