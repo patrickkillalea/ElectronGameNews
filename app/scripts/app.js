@@ -30,6 +30,11 @@
                 controller: 'dotaController',
                 controllerAs: '_ctrl'
             });
+            $routeProvider.when('/article', {
+                templateUrl: _templateBase + '/wow/article.html' ,
+                controller: 'dotaController',
+                controllerAs: '_ctrl'
+            });
             $routeProvider.otherwise({ redirectTo: '/' });
         }
     ]);

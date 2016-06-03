@@ -1,14 +1,13 @@
-<div style="background-color: rgba(60,60,60,0.5);height:80px;width:100%;box-shadow: 2px 2px 1px rgb(128,128,128);">
-    <div class="nodrag" style="display:inline; padding-left:40px;"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" height="80px" width="80px" /></div>
+<div style="position: relative;background-color: rgba(60,60,60,0.5);height:80px;width:100%;box-shadow: 2px 2px 1px rgb(128,128,128);">
+    <div class="nodrag" style="cursor: pointer;display:inline; padding-left:40px;"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" height="80px" width="80px" /></div>
     <div class="nodrag" style="display:inline">
         <a href="#"><h3 style="color:white;display:inline;margin-left:30px;">Link 1</h3></a>
         <a href="#"><h3 style="color:white;display:inline;margin-left:30px;">Link 2</h3></a>
         <a href="#"><h3 style="color:white;display:inline;margin-left:30px;">Link 3</h3></a>
         <a href="#"><h3 style="color:white;display:inline;margin-left:30px;">Link 4</h3></a>
-        <button onclick="myFunction()">Click me</button>
     </div>
-    <div align="right" style="display:inline;">
-        <form action="" class="search-form" style="display:inline; ">
+    <div>
+        <form action=" " class="search-form">
             <div class="form-group has-feedback nodrag">
                 <label for="search" class="sr-only">Search</label>
                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
@@ -16,5 +15,30 @@
             </div>
         </form>
     </div>
+    <div class="menuIcons">
+        <i class="fa fa-minus nodrag icon" onclick="minimizeApp()"></i>
+        <i class="fa fa-expand nodrag icon" onclick="maximizeApp()"></i>
+        <i class="fa fa-times nodrag icon" onclick="closeApp()"></i>
+    </div>
 </div>
-<script src="topnav.js"></script>
+<style type="text/css">
+.icon {
+    font-size: 20px;
+    color: grey;
+    opacity: 0.5;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: darkgrey;
+}
+
+.menuIcons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+</style>
