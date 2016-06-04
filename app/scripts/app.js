@@ -11,6 +11,11 @@
     ])
     .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/', {
+                templateUrl: _templateBase + '/home/home.html' ,
+                controller: 'homeController',
+                controllerAs: '_ctrl'
+            });
+            $routeProvider.when('/wow', {
                 templateUrl: _templateBase + '/wow/wow.html' ,
                 controller: 'wowController',
                 controllerAs: '_ctrl'
