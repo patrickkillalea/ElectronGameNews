@@ -18,3 +18,4 @@ function minimizeApp() {
     var window = remote.getCurrentWindow();
     window.minimize();
 }
+
