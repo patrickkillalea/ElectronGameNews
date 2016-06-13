@@ -1,6 +1,6 @@
 .search-form .form-group {
     position: absolute;
-    right:0px;
+    right: 0px;
     top: 35px;
     transition: all 0.35s, border-radius 0s;
     width: 32px;
@@ -60,5 +60,3 @@
     /*margin-right: 30px;*/
     right: 0px;
 }
-
-    

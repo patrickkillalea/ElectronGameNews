@@ -16,7 +16,7 @@ mongoose.connect('mongodb://patrickkillalea:ilwp2000@ds055802.mlab.com:55802/dot
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  // we're connected!
+    console.log("DB Connected!");
 });
 
 // var kittySchema = mongoose.Schema({
