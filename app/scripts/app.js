@@ -3,7 +3,7 @@
 
     // var mongoose = require('mongoose');
     // mongoose.connect('mongodb://patrickkillalea:ilwp2000@ds021691.mlab.com:21691/mediumdb');
-    
+
     var _templateBase = './scripts';
 
     angular.module('app', [

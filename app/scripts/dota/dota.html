@@ -1,29 +1,33 @@
-<div class="col-md-10 col-sm-10 col-xs-10">
+<div class="col-md-10 col-sm-10 col-xs-10" style="margin-top: 20px;">
 
     <body>
-<!--         <div data-ng-repeat="post in posts | limitTo:4 | orderBy: '-date'" align="center">
-            <a href="#/posts/{{post._id}}">
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="articleContainer">
-                        <div style="background-image: url('{{post.image}}');background-size: cover;background-repeat: no-repeat;background-position: center;height:200px;width:100%;"></div>
-                        <div class="transparent articleDate">
-                            {{post.date | date : "dd.MM.y"}}
-                        </div>
-                        <div class="transparent articleTitle">
-                            {{post.title}}
-                        </div>
-                        <div class="articleContent">
-                            <p class="wrap">{{post.content}}</p>
-                        </div>
+        <div style="color:white;" ng-controller="dotaController">
+            <div ng-repeat="x in dotadata">
+                <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div style="margin:2px;background-color:grey; border:white 1px solid;">
+                        <h1>{{ x.title }}</h1>
+                        <p>{{ x.headline }}</p>
+                        <p>{{ x.date }}</p>
+                        <!-- <img ng-src="{{ x.image }}" width="100%" alt="Article Image" style="border:white 1px solid; background-color:black;" /> -->
+                        <div alt="Article Image" style="background-image: url('{{x.image}}');border:white 1px solid; background-color:black;background-size: cover;background-repeat: no-repeat;background-position: center;height:200px;width:100%;"></div>
+                        <p>{{ x.author }}</p>
                     </div>
                 </div>
-            </a>
-        </div> -->
+            </div>
+            <!--             <table>
+                <tr ng-repeat="x in countries | limitTo:10">
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.capital }}</td>
+                    <td>{{ x.region }}</td>
+                    <td>{{ x.population | currency }}</td>
+                </tr>
+            </table> -->
+        </div>
     </body>
 </div>
 <style type="text/css">
 body {
-    background: url('././assets/images/dota.jpg') no-repeat center center fixed;
+    background: url('././assets/images/dota.jpg') no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -44,64 +48,3 @@ a:active {
     text-decoration: none;
 }
 </style>
-<!-- <div style="width:100%" layout="row">
-    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-    md-component-id="left"
-    md-is-locked-open="$mdMedia('gt-sm')">
-    <md-toolbar layout="row" class="md-whiteframe-z1">
-    <h1>Customers</h1>
-    </md-toolbar>
-    <md-input-container style="margin-bottom:0">
-    <label>Customer Name</label>
-    <input required name="customerName" ng-model="_ctrl.filterText" ng-change="_ctrl.filter()">
-    </md-input-container>
-    <md-list>
-    <md-list-item ng-repeat="it in _ctrl.customers">
-    <md-button ng-click="_ctrl.selectCustomer(it, $index)" ng-class="{'selected' : it === _ctrl.selected }">
-    {{it.name}}
-    </md-button>
-    </md-list-item>
-    </md-list>
-    </md-sidenav>
-    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
-        <md-toolbar layout="row" class="md-whiteframe-z1">
-        <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-        <md-icon md-svg-icon="menu"></md-icon>
-        </md-button>
-        <h1>{{ _ctrl.selected.name }}</h1>
-        </md-toolbar>
-        <md-content flex id="content">
-        <div layout="column" style="width:50%">
-            <br />
-            <md-content layout-padding class="autoScroll">
-            <md-input-container>
-            <label>Name</label>
-            <input ng-model="_ctrl.selected.name" type="text">
-            </md-input-container>
-            <md-input-container md-no-float>
-            <label>Email</label>
-            <input ng-model="_ctrl.selected.email" type="text">
-            </md-input-container>
-            <md-input-container>
-            <label>Address</label>
-            <input ng-model="_ctrl.selected.address"  ng-required="true">
-            </md-input-container>
-            <md-input-container md-no-float>
-            <label>City</label>
-            <input ng-model="_ctrl.selected.city" type="text" >
-            </md-input-container>
-            <md-input-container md-no-float>
-            <label>Phone</label>
-            <input ng-model="_ctrl.selected.phone" type="text">
-            </md-input-container>
-            </md-content>
-            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                <md-button class="md-raised md-info" ng-click="_ctrl.createCustomer()">Add</md-button>
-                <md-button class="md-raised md-primary" ng-click="_ctrl.saveCustomer()">Save</md-button>
-                <md-button class="md-raised md-danger" ng-click="_ctrl.cancelEdit()">Cancel</md-button>
-                <md-button class="md-raised md-warn" ng-click="_ctrl.deleteCustomer()">Delete</md-button>
-            </section>
-        </div>
-        </md-content>
-    </div>
-</div> -->
