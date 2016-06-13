@@ -1,51 +1,44 @@
 <body>
-    
     <div class="col-md-10 col-sm-10 col-xs-10">
-        <div style="color:white;">
-            <h1>Hello World!</h1>
-            <!-- All of the Node.js APIs are available in this renderer process. -->
-            We are using node
-            <script>
-            document.write(process.versions.node)
-            </script>, Chromium
-            <script>
-            document.write(process.versions.chrome)
-            </script>, and Electron
-            <script>
-            document.write(process.versions.electron)
-            </script>.
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
+
+        <video width="100%" xmlns="http://www.w3.org/1999/xhtml" class="background-video" autoplay="autoplay" loop="loop" poster="/sc2/static/images/homepage/Abathur_Render.jpg">
+            <source src="http://media.blizzard.com/sc2/home/Abathur_Render.webm" type="video/webm" />
+            <source src="http://media.blizzard.com/sc2/home/Abathur_Render.mp4" type="video/mp4" />
+        </video>
+        <div class="vid">
+            <video width="100%" xmlns="http://www.w3.org/1999/xhtml" class="background-video logo-video" autoplay="autoplay" loop="loop" poster="/sc2/static/videos/logo.jpg">
+                <source src="http://media.blizzard.com/sc2/home/logo.webm" type="video/webm" />
+            </video>
         </div>
     </div>
 </body>
 <style type="text/css">
 body {
-background: url('././assets/images/sc.jpg') no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+    background: url('././assets/images/sc.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 a:link {
-text-decoration: none;
+    text-decoration: none;
 }
+
 a:visited {
-text-decoration: none;
+    text-decoration: none;
 }
-a:hover {
-}
+
+a:hover {}
+
 a:active {
-text-decoration: none;
+    text-decoration: none;
 }
+
+.vid {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 </style>

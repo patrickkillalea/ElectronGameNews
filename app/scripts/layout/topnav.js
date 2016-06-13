@@ -7,9 +7,16 @@ function closeApp() {
 
 function maximizeApp() {
     var remote = require('remote');
-    console.log("Maximize Application");
+
     var window = remote.getCurrentWindow();
-    window.maximize();
+
+    if (window.isFullScreen()) {
+        console.log("Restore Application");
+        window.setFullScreen(false)
+    } else {
+        console.log("Maximize Application");
+        window.setFullScreen(true)
+    }
 }
 
 function minimizeApp() {
@@ -18,4 +25,3 @@ function minimizeApp() {
     var window = remote.getCurrentWindow();
     window.minimize();
 }
-
