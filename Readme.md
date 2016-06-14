@@ -4,6 +4,7 @@ This is an Electron application which pulls games data from the net and displays
 
 It uses ng-route to control the tabs. Styles are inline while app is being developed.
 
+![alt tag](http://i.imgur.com/UGIWo0l.jpg)
 
 #Install
 
@@ -42,14 +43,14 @@ Install Application dependencies:
 Change directory to ```app``` folder, then run
 
 ```
-npm install
+	npm install
 ```
 
 
 #Run 
 ---
 
-Run your application by entering following command in your command prompt from the ElectronGameNews directory
+Run your application by entering following command in your command prompt from the ```ElectronGameNews``` directory
 
 ```
 	gulp run
@@ -61,7 +62,7 @@ Run your application by entering following command in your command prompt from t
 You can get the release version with following command:
 
 ```
-gulp build-electron
+	gulp build-electron
 ```
 
 
