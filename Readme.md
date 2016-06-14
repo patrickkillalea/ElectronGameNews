@@ -1,13 +1,31 @@
-# ElectronAngular
+# Electron Game News
 
-This sample application demonstrate how to create a desktop application using Angular JS and Github Electron.
+This is an Electron application which pulls games data from the net and displays it to the user using AngularJS and MongoDB.
 
+It uses ng-route to control the tabs. Styles are inline while app is being developed.
 
 
 #Install
+
+To install, follow the following steps
+
 --- 
 
-Install dependencies.
+Install Git, Node and MongoDB
+
+--- 
+
+Get Code
+
+```
+	git clone https://github.com/patrickkillalea/ElectronGameNews
+	
+	cd ElectronGameNews
+```
+
+--- 
+
+Install dependencies
 
 ```
 	npm install
@@ -31,7 +49,7 @@ npm install
 #Run 
 ---
 
-Run your application by entering following command in your command prompt
+Run your application by entering following command in your command prompt from the ElectronGameNews directory
 
 ```
 	gulp run
