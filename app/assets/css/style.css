@@ -23,6 +23,7 @@ a:active {
 
 .toplink:hover {
     font-size: 30px;
+    cursor: pointer;
 }
 
 .iconimage img {

@@ -1,15 +1,22 @@
 <div style="-webkit-app-region: drag; position: relative;background-color: rgba(60,60,60,0.7);height:80px;width:100%;box-shadow: 2px 2px 1px rgb(128,128,128);">
-
     <div class="nodrag" style="cursor: pointer;display:inline; padding-left:40px;">
         <a href="#home">
-            <div style="display: inline-block;height:80px; width:80px" class="iconimage"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" width="100%" height="100%" /></div>
+            <div onclick="changeGame('home')" style="display: inline-block;height:80px; width:80px" class="iconimage"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" width="100%" height="100%" /></div>
         </a>
     </div>
     <div class="nodrag" style="display:inline">
-        <a href="#"><div class="toplink">News</div></a>
-        <a href="#"><div class="toplink">Fixtures</div></a>
-        <a href="#"><div class="toplink">Competitions</div></a>
-        <a href="#"><div class="toplink">Resources</div></a>
+        <span onclick="newsTop(currGame)">
+            <div class="toplink">News</div>
+        </span>
+        <span onclick="fixturesTop(currGame)">
+            <div class="toplink">Fixtures</div>
+        </span>
+        <span onclick="competitionsTop(currGame)">
+            <div class="toplink">Competitions</div>
+        </span>
+        <span onclick="resourcesTop(currGame)">
+            <div class="toplink">Resources</div>
+        </span>
     </div>
     <div>
         <form action=" " class="search-form">
