@@ -15,3 +15,28 @@ a:hover {}
 a:active {
     text-decoration: none;
 }
+
+.toplink {
+    font-size: 25px;
+    color:white;display:inline;margin-left:20px;
+}
+
+.toplink:hover {
+    font-size: 30px;
+}
+
+.iconimage img {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.iconimage:hover img {
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    -ms-transform:scale(1.2); /* IE 9 */
+    -o-transform:scale(1.2); /* Opera */
+     transform:scale(1.2);
+}

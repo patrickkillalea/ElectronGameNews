@@ -1,32 +1,39 @@
 <div class="col-md-2 col-sm-2 col-xs-2" style="padding-left:0px;">
     <div class="hidden-lg" style="color:white; background-color: rgba(0,0,0,0.6); height:498px;width:140px;" align="center">
         <a href="#dota">
-            <div id="dota"><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/dotalogo.png" height="60px" width="60px" /></div>
+            <div class="iconimage"><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/dotaicon.png" height="80px" width="80px" /></div>
+            <div style="margin-top: -15px;color: white;text-decoration: none;">DOTA 2</div>
         </a>
         <a href="#wow">
-            <div><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/wowlogo.png" height="60px" width="120px" /></div>
+            <div class="iconimage"><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/wowicon.png" height="80px" width="80px" /></div>
+            <div style="margin-top: -15px;color: white;text-decoration: none;">World of Warcraft</div>
         </a>
         <a href="#cs">
-            <div><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/cslogo.jpg" height="60px" width="120px" /></div>
+            <div class="iconimage"><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/csicon.png" height="80px" width="80px" /></div>
+            <div style="margin-top: -15px;color: white;text-decoration: none;">Counter Strike</div>
         </a>
         <a href="#starcraft">
-            <div><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/sclogo.png" height="60px" width="120px" /></div>
+            <div class="iconimage"><img style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/starcrafticon.png" height="80px" width="80px" /></div>
+            <div style="margin-top: -15px;color: white;text-decoration: none;">Starcraft</div>
         </a>
     </div>
     <form>
-        <input type="hidden" name="gameLink">
-        <div id="thumbs" class="visible-lg" style="color:white; background-color: rgba(0,0,0,0.6); height:560px;width:200px;" align="center">
+        <div class="visible-lg" style="color:white; background-color: rgba(0,0,0,0.6); height:560px;width:200px;" align="center">
             <a href="#dota">
-                <div><img id="dotaLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/dotalogo.png" height="100px" width="120px" /></div>
+                <div class="iconimage"><img id="dotaLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/dotaicon.png" height="120px" width="120px" /></div>
+                <div style="margin-top: -15px;color: white;text-decoration: none;">DOTA 2</div>
             </a>
             <a href="#wow">
-                <div><img id="wowLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/wowlogo.png" height="100px" width="180px" /></div>
+                <div class="iconimage"><img id="wowLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/wowicon.png" height="120px" width="120px" /></div>
+                <div style="margin-top: -15px;color: white;text-decoration: none;">World of Warcraft</div>
             </a>
             <a href="#cs">
-                <div><img id="csLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/cslogo.jpg" height="100px" width="180px" /></div>
+                <div class="iconimage"><img id="csLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/csicon.png" height="120px" width="120px" /></div>
+                <div style="margin-top: -15px;color: white;text-decoration: none;">Counter Strike</div>
             </a>
             <a href="#starcraft">
-                <div><img id="starcraftLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/sclogo.png" height="100px" width="180px" /></div>
+                <div class="iconimage"><img id="starcraftLink" style="margin-top: 10px; margin-bottom: 10px;" src="././assets/images/starcrafticon.png" height="120px" width="120px" /></div>
+                <div style="margin-top: -15px;color: white;text-decoration: none;">Starcraft</div>
             </a>
         </div>
     </form>
@@ -42,22 +49,3 @@
     border: 5px dashed red;
 }
 </style>
-<!-- <li ng-class="{active: $route.current.activetab == 'dashboard'}"></li> -->
-<script>
-$(document).ready(function() {
-    var id = "dotaLink";
-    $("#thumbs #" + id).addClass('border-highlight');
-});
-$('#thumbs').delegate('img', 'click', function() {
-    var $this = $(this);
-    // Clear formatting
-    $('#thumbs img').removeClass('border-highlight');
-
-    // Highlight with coloured border
-    $this.addClass('border-highlight');
-
-    // Changes the value of the form field "gameLink" to the file name shown in the image.
-    $('[name="gameLink"]').val($this.attr('src').substring($this.attr('src').lastIndexOf('/') + 1));
-    alert($(this).attr("id"));
-});
-</script>
