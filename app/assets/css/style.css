@@ -16,15 +16,7 @@ a:active {
     text-decoration: none;
 }
 
-.toplink {
-    font-size: 25px;
-    color:white;display:inline;margin-left:20px;
-}
-
-.toplink:hover {
-    font-size: 30px;
-    cursor: pointer;
-}
+/*SideNav*/
 
 .iconimage img {
     -webkit-transition: all 1s ease; /* Safari and Chrome */
@@ -40,4 +32,40 @@ a:active {
     -ms-transform:scale(1.2); /* IE 9 */
     -o-transform:scale(1.2); /* Opera */
      transform:scale(1.2);
+}
+.active {
+    background-color: rgba(0, 80, 120, 0.5)
+}
+.inactive {
+    background-color: rgba(0, 80, 120, 0)
+}
+
+/*TopNav*/
+.toplink {
+    font-size: 25px;
+    color:white;display:inline;margin-left:20px;
+}
+
+.toplink:hover {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: darkgrey;
+}
+
+.menuIcons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }

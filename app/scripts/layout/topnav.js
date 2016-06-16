@@ -1,15 +1,23 @@
-var currGame = "";
+var currGame = "home";
+var prevGame = "";
 
 function changeGame(game) {
+    prevGame = currGame;
     currGame = game;
     console.log("Current game: " + currGame);
-    // console.log("Current game111: " + "#" + game + "/Fixtures.html");
+    var d = document.getElementById(currGame+"Link");
+    d.className += " active";
+    prevGameInactive(prevGame);
+}
+
+function prevGameInactive(prevGame) {
+    var d = document.getElementById(prevGame+"Link");
+    d.className = "nodrag iconimage";
 }
 
 function newsTop(currGame) {
     console.log("News for: " + currGame);
     window.location.href = "#" + currGame + "news";
-    console.log("Newssss for: " + "#" + currGame + "news");
 }
 
 function fixturesTop(currGame) {
