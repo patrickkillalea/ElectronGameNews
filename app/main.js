@@ -70,7 +70,7 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
 
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 1000, height: 800, 'min-width': 800, 'min-height': 650, frame: false });
+    mainWindow = new BrowserWindow({ width: 1000, height: 800, 'min-width': 800, 'min-height': 680, frame: false });
 
     // For No Top frame
     // , frame: false
