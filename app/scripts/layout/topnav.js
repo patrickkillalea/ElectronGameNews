@@ -1,12 +1,33 @@
 var currGame = "home";
 var prevGame = "";
 
+
+
+function topNavInactive() {
+    console.log("In the function");
+    if (currGame==="home") {
+        var d = document.getElementById("topNavLinks");
+    d.className = "nodrag hidenav";
+    console.log("Deactivating nav for: "+currGame);
+    }
+    else{
+        console.log("Leaving nav alone for: "+currGame);
+        return;
+    }
+}
+
 function changeGame(game) {
     prevGame = currGame;
     currGame = game;
     console.log("Current game: " + currGame);
     var d = document.getElementById(currGame+"Link");
     d.className += " active";
+    // if (currGame === "home"){
+
+    //         console.log("HIDE THE NAV: ");
+    //     //TODO
+    //     //Hide the navbar
+    // };
     prevGameInactive(prevGame);
 }
 

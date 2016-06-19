@@ -1,0 +1,38 @@
+<div style="-webkit-app-region: drag; position: relative;background-color: rgba(60,60,60,0.7);height:80px;width:100%;box-shadow: 2px 2px 1px rgb(128,128,128);">
+    <!--     <div id="homeLink" class="active nodrag" style="cursor: pointer;display:inline; padding-left:40px;">
+        <a href="#home">
+            <div onclick="changeGame('home')" style="display: inline-block;height:80px; width:80px" class="iconimage"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" width="100%" height="100%" /></div>
+        </a>
+    </div> -->
+    <a href="#home">
+        <div id="homeLink" class="active nodrag iconimage" style="display: inline; margin-left: 37px;" onclick="changeGame('home')"><img src="././assets/images/homeicon.png" height="65px" width="65px" style="margin-top: 10px;" /></div>
+    </a>
+    <div class="nodrag" style="display:inline;">
+        <span onclick="newsTop(currGame)">
+            <div class="toplink">News</div>
+        </span>
+        <span onclick="fixturesTop(currGame)">
+            <div class="toplink">Fixtures</div>
+        </span>
+        <span onclick="competitionsTop(currGame)">
+            <div class="toplink">Competitions</div>
+        </span>
+        <span onclick="resourcesTop(currGame)">
+            <div class="toplink">Resources</div>
+        </span>
+    </div>
+    <div>
+        <form action=" " class="search-form">
+            <div class="form-group has-feedback nodrag">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                <span class="fa fa-search form-control-feedback"></span>
+            </div>
+        </form>
+    </div>
+    <div class="menuIcons">
+        <i class="fa fa-minus nodrag icon" onclick="minimizeApp()"></i>
+        <i class="fa fa-expand nodrag icon" onclick="maximizeApp()"></i>
+        <i class="fa fa-times nodrag icon" onclick="closeApp()"></i>
+    </div>
+</div>

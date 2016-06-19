@@ -1,13 +1,8 @@
-<div style="-webkit-app-region: drag; position: relative;background-color: rgba(60,60,60,0.7);height:80px;width:100%;box-shadow: 2px 2px 1px rgb(128,128,128);">
-    <!--     <div id="homeLink" class="active nodrag" style="cursor: pointer;display:inline; padding-left:40px;">
-        <a href="#home">
-            <div onclick="changeGame('home')" style="display: inline-block;height:80px; width:80px" class="iconimage"><img src="http://findicons.com/files/icons/770/token_dark/256/games.png" width="100%" height="100%" /></div>
-        </a>
-    </div> -->
+<div id="top-nav">
     <a href="#home">
-        <div id="homeLink" class="active nodrag iconimage" style="display: inline; margin-left: 37px;" onclick="changeGame('home')"><img src="././assets/images/homeicon.png" height="65px" width="65px" style="margin-top: 10px;" /></div>
+        <div id="homeLink" class="active nodrag iconimage" style="display: inline-block; margin-left: 37px;" onclick="changeGame('home')" ><img src="././assets/images/homeicon.png" height="65px" width="65px" style="margin-top: 10px;" /></div>
     </a>
-    <div class="nodrag" style="display:inline;">
+    <div id="topNavLinks" class="nodrag" style="display:inline-block;">
         <span onclick="newsTop(currGame)">
             <div class="toplink">News</div>
         </span>
@@ -36,3 +31,9 @@
         <i class="fa fa-times nodrag icon" onclick="closeApp()"></i>
     </div>
 </div>
+
+<style type="text/css">
+    #hidenav{
+        display: none;
+    }
+</style>
