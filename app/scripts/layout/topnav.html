@@ -1,8 +1,10 @@
 <div id="top-nav">
     <a href="#home">
-        <div id="homeLink" class="active nodrag iconimage" style="display: inline-block; margin-left: 37px;" onclick="changeGame('home')" ><img src="././assets/images/homeicon.png" height="65px" width="65px" style="margin-top: 10px;" /></div>
+        <div id="homeLink" class="active nodrag iconimage" onclick="changeGame('home')" >
+            <img src="././assets/images/homeicon.png" height="65px" width="65px"/>
+        </div>
     </a>
-    <div id="topNavLinks" class="nodrag" style="display:inline-block;">
+    <div id="topNavLinks" class="nodrag hidenav">
         <span onclick="newsTop(currGame)">
             <div class="toplink">News</div>
         </span>
@@ -25,15 +27,9 @@
             </div>
         </form>
     </div>
-    <div class="menuIcons">
+    <div id="menuIcons">
         <i class="fa fa-minus nodrag icon" onclick="minimizeApp()"></i>
         <i class="fa fa-expand nodrag icon" onclick="maximizeApp()"></i>
         <i class="fa fa-times nodrag icon" onclick="closeApp()"></i>
     </div>
 </div>
-
-<style type="text/css">
-    #hidenav{
-        display: none;
-    }
-</style>

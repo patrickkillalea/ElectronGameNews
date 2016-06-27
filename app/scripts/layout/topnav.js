@@ -2,63 +2,48 @@ var currGame = "home";
 var prevGame = "";
 
 
-
-function topNavInactive() {
-    console.log("In the function");
-    if (currGame==="home") {
-        var d = document.getElementById("topNavLinks");
-    d.className = "nodrag hidenav";
-    console.log("Deactivating nav for: "+currGame);
-    }
-    else{
-        console.log("Leaving nav alone for: "+currGame);
-        return;
-    }
-}
-
 function changeGame(game) {
     prevGame = currGame;
     currGame = game;
-    console.log("Current game: " + currGame);
     var d = document.getElementById(currGame+"Link");
     d.className += " active";
-    // if (currGame === "home"){
 
-    //         console.log("HIDE THE NAV: ");
-    //     //TODO
-    //     //Hide the navbar
-    // };
+if (currGame==="home") {
+    menuitem = document.getElementById("topNavLinks");
+    menuitem.className = "nodrag hidenav";
+    }
+    else{
+        var menuitem = document.getElementById("topNavLinks");
+    menuitem.className = "nodrag"; 
+    }
+
     prevGameInactive(prevGame);
 }
 
 function prevGameInactive(prevGame) {
     var d = document.getElementById(prevGame+"Link");
     d.className = "nodrag iconimage";
+
 }
 
 function newsTop(currGame) {
-    console.log("News for: " + currGame);
     window.location.href = "#" + currGame + "news";
 }
 
 function fixturesTop(currGame) {
-    console.log("Fixtures for: " + currGame);
     window.location.href = "#" + currGame + "fixtures";
 }
 
 function competitionsTop(currGame) {
-    console.log("Competitions for: " + currGame);
     window.location.href = "#" + currGame + "competitions";
 }
 
 function resourcesTop(currGame) {
-    console.log("Resources for: " + currGame);
     window.location.href = "#" + currGame + "resources";
 }
 
 function closeApp() {
     var remote = require('remote');
-    console.log("Closing Application");
     var window = remote.getCurrentWindow();
     window.close();
 }
@@ -69,7 +54,6 @@ function maximizeApp() {
     var window = remote.getCurrentWindow();
 
     if (window.isFullScreen()) {
-        console.log("Restore Application");
         window.setFullScreen(false)
     } else {
         console.log("Maximize Application");
@@ -79,7 +63,6 @@ function maximizeApp() {
 
 function minimizeApp() {
     var remote = require('remote');
-    console.log("Minimize Application");
     var window = remote.getCurrentWindow();
     window.minimize();
 }
