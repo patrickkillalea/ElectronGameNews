@@ -3,41 +3,39 @@
     <body>
         <div style="height:100%;overflow-y:auto;">
             <div class="hidden-lg" style="color:white;">
-                <div ng-repeat="x in dotadata | limitTo:8">
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
-                        <div style="margin:4px; border:white 1px solid;">
-                            <div alt="Article Image" style="background-image: url('{{x.image}}'); background-color:black;background-size: cover;background-repeat: no-repeat;background-position: center;height:200px;width:100%;">
-                                <!-- <div style="position:absolute;top:5px; background-color: rgba(0,0,0,0.7);margin:5px">
-                                <h1>{{ x.title }}</h1>
-                            </div>
-                            <div style="position:absolute;top:10px;right:25px; width: 50px; height: 50px;">
-                                <img ng-src="{{ x.avatar }}" width="100%" height="100%" style="border-radius:50%;border:black 1px solid;" />
-                            </div> -->
-                                <div style="position:absolute;bottom:5px; background-color: rgba(0,0,0,0.7);margin-bottom:5px">
-                                    <p>{{ x.headline }}</p>
+                <div ng-repeat="x in dotanews | limitTo:8">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:200px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p style="color:white">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p style="color:white">{{ x.articledate | date: short }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="visible-lg" style="color:white;">
-                <div ng-repeat="x in dotadata | limitTo:16">
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
-                        <div style="margin:4px; border:white 1px solid;">
-                            <div alt="Article Image" style="background-image: url('{{x.image}}'); background-color:black;background-size: cover;background-repeat: no-repeat;background-position: center;height:250px;width:100%;">
-                                <!-- <div style="position:absolute;top:5px; background-color: rgba(0,0,0,0.7);margin:5px">
-                                <h1>{{ x.title }}</h1>
-                            </div>
-                            <div style="position:absolute;top:10px;right:25px; width: 50px; height: 50px;">
-                                <img ng-src="{{ x.avatar }}" width="100%" height="100%" style="border-radius:50%;border:black 1px solid;" />
-                            </div> -->
-                                <div style="position:absolute;bottom:5px; background-color: rgba(0,0,0,0.7);margin-bottom:5px">
-                                    <p>{{ x.headline }}</p>
+                <div ng-repeat="x in dotanews | limitTo:16">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:250px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p style="color:white">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p style="color:white">{{ x.articledate | date: short }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

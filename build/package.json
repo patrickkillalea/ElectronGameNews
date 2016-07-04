@@ -1,7 +1,7 @@
 {
-  "name": "AngularElectron",
+  "name": "ElectronGameNews",
   "version": "0.0.0",
-  "description": "AngularElectron",
+  "description": "ElectronGameNews",
   "main": "main.js",
   "dependencies": {
     "body-parser": "^1.15.1",

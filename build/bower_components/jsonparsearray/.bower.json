@@ -1,0 +1,34 @@
+{
+  "name": "jsonparse",
+  "description": "Parse streaming json into an array",
+  "main": "./browser/jsonparsearray.min.js",
+  "authors": [
+    "Jonas Colmsjö"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "streaming",
+    "parser",
+    "array"
+  ],
+  "homepage": "https://github.com/gizur/jsonparsearray",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.0.4",
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.4",
+    "commit": "a683d13ab5c10a48fdddcc57a5b74b17b852114b"
+  },
+  "_source": "https://github.com/gizur/jsonparsearray.git",
+  "_target": "*",
+  "_originalSource": "jsonparsearray"
+}

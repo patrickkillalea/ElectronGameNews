@@ -1,39 +1,55 @@
 <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top: 20px; height:80vh;">
+
     <body>
-        <div class="col-md-8 col-sm-8 col-xs-8" style="height:100%;overflow-y:auto;border:solid white 1px;background-color:rgba(60,60,60,0.5);">
-            <div style="color:white;margin-top:20px;margin-bottom: 20px;">
-                
-                <div style="color:white; height:100%;" align="center">
-                    London </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> MajorLondon </br> Major
+        <div style="height:100%;overflow-y:auto;">
+            <div class="hidden-lg" style="color:white;">
+                <div ng-repeat="x in dotacompetitions | limitTo:8">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:200px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p style="color:white">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p style="color:white">{{ x.compdate | date: short }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <div style="color:white;" align="center">
-                    <a href="#"><div id="comp-button">
-                        Dublin </br> Major
-                    </div></a>
-                    <a href="#"><div id="comp-button">
-                        London </br> Major
-                    </div></a>
-                    <a href="#"><div id="comp-button">
-                        Shanghai </br> Major
-                    </div></a>
-                    <a href="#"><div id="comp-button">
-                        New York </br> Major
-                    </div></a>
+            <div class="visible-lg" style="color:white;">
+                <div ng-repeat="x in dotacompetitions | limitTo:16">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:250px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p style="color:white">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p style="color:white">{{ x.compdate | date: short }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
         </div>
     </body>
 </div>
 <style type="text/css">
 body {
-background: url('././assets/images/dotacompetitions.jpg') no-repeat center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+    background: url('././assets/images/dotacompetitions.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 a:link {
     text-decoration: none;
 }
@@ -45,5 +61,4 @@ a:visited {
 a:active {
     text-decoration: none;
 }
-
 </style>
