@@ -213,23 +213,18 @@ border-bottom-right-radius: 18.5px;
 
 .articleTitle {
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
+    float: left;
     background-color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 5px
-    max-width:100%;
+    max-width: 90%;
 }
 
 .articleDate {
-    position: absolute;
-    top: 5px;
-    right: 0px;
+    float: right;
     background-color: rgba(0, 0, 0, 0.7);
-    margin-top: 5px;
-    margin-right: 25px;
 }
 
 .articleContainer {
-    margin: 10px;
     box-shadow: 4px 4px 2px #000000;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -239,12 +234,27 @@ border-bottom-right-radius: 18.5px;
 
 .articleContainer:hover {
     -webkit-transform: scale(1.1);
-    /* Safari and Chrome */
     -moz-transform: scale(1.1);
-    /* Firefox */
     -ms-transform: scale(1.1);
-    /* IE 9 */
     -o-transform: scale(1.1);
-    /* Opera */
     transform: scale(1.1);
+}
+
+.mainContainer {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.articleDateContent {
+    color: white;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.articleTitleContent {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }
