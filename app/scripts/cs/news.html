@@ -1,30 +1,43 @@
-<div class="col-md-10 col-sm-10 col-xs-10">
+<div class="col-md-10 col-sm-10 col-xs-10" style="height:80vh;">
+
     <body>
-        <div style="color:white;">
-            <h1>Hello World!</h1>
-            <!-- All of the Node.js APIs are available in this renderer process. -->
-            We are using node
-            <script>
-            document.write(process.versions.node)
-            </script>, Chromium
-            <script>
-            document.write(process.versions.chrome)
-            </script>, and Electron
-            <script>
-            document.write(process.versions.electron)
-            </script>.
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-6">
-            <div style="background-color: rgba(60,60,60,0.5); width: 100%; height:200px; margin: 10px;border:white solid 1px;"></div>
+        <div class="mainContainer">
+            <div class="hidden-lg" style="color:white;">
+                <div ng-repeat="x in csnews | limitTo:8">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:200px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p class="articleTitleContent">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p class="articleDateContent">{{ x.articledate | date: short }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="visible-lg" style="color:white;">
+                <div ng-repeat="x in csnews | limitTo:16">
+                    <a target="_blank" href="{{x.link}}">
+                        <div class="col-lg-3 col-sm-6 col-xs-6" style="margin:20px;">
+                            <div class="articleContainer">
+                                <div class="articleImage" alt="Article Image" style="height:250px;background-image: url('{{x.image}}');">
+                                    <div class="articleTitle">
+                                        <p class="articleTitleContent">{{ x.title }}</p>
+                                    </div>
+                                    <div class="articleDate">
+                                        <p class="articleDateContent">{{ x.articledate | date: short }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </body>
 </div>

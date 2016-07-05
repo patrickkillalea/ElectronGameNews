@@ -13,21 +13,21 @@
                 templateUrl: _templateBase + '/home/home.html',
                 controller: 'homeController'
             });
-            $routeProvider.when('/wownews', {
-                templateUrl: _templateBase + '/wow/news.html',
-                controller: 'wowController'
+            $routeProvider.when('/overwatchnews', {
+                templateUrl: _templateBase + '/overwatch/news.html',
+                controller: 'overwatchController'
             });
-            $routeProvider.when('/wowfixtures', {
-                templateUrl: _templateBase + '/wow/fixtures.html',
-                controller: 'wowController'
+            $routeProvider.when('/overwatchfixtures', {
+                templateUrl: _templateBase + '/overwatch/fixtures.html',
+                controller: 'overwatchController'
             });
-            $routeProvider.when('/wowcompetitions', {
-                templateUrl: _templateBase + '/wow/competitions.html',
-                controller: 'wowController'
+            $routeProvider.when('/overwatchcompetitions', {
+                templateUrl: _templateBase + '/overwatch/competitions.html',
+                controller: 'overwatchController'
             });
-            $routeProvider.when('/wowresources', {
-                templateUrl: _templateBase + '/wow/resources.html',
-                controller: 'wowController'
+            $routeProvider.when('/overwatchresources', {
+                templateUrl: _templateBase + '/overwatch/resources.html',
+                controller: 'overwatchController'
             });
             $routeProvider.when('/starcraftnews', {
                 templateUrl: _templateBase + '/starcraft/news.html',
@@ -89,11 +89,6 @@
             });
             $routeProvider.when('/dotaresources', {
                 templateUrl: _templateBase + '/dota/resources.html',
-                controller: 'dotaController',
-                controllerAs: '_ctrl'
-            });
-            $routeProvider.when('/article', {
-                templateUrl: _templateBase + '/wow/article.html',
                 controller: 'dotaController',
                 controllerAs: '_ctrl'
             });

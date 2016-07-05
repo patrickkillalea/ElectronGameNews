@@ -1,0 +1,5 @@
+[{ "title": "Esports Championship Series - Season 1", "articledate": "2016-04-10T18:25:43.511Z", "link": "http://www.gosugamers.net/counterstrike/events/486-esports-championship-series-season-1", "image": "http://www.gosugamers.net/uploads/images/events/event-page/2016/april/486-1460237556.jpeg" },
+    { "title": "Operation Kinguin #3", "articledate": "2016-04-28T18:25:44.511Z", "link": "http://www.gosugamers.net/counterstrike/events/498-operation-kinguin-3", "image": "http://www.gosugamers.net/uploads/images/events/event-page/2016/april/498-1461801657.jpeg" },
+    { "title": "SKYLLA", "articledate": "2016-06-04T15:25:43.511Z", "link": "http://www.gosugamers.net/counterstrike/events/520-skylla", "image": "http://www.gosugamers.net/uploads/images/events/event-page/2016/may/520-1464634318.jpeg" },
+    { "title": "ELEAGUE Season 1", "articledate": "2016-05-24T18:25:43.511Z", "link": "http://www.gosugamers.net/counterstrike/events/518-eleague-season-1", "image": "http://www.gosugamers.net/uploads/images/events/event-page/2016/may/518-1464103309.jpeg" }
+]
